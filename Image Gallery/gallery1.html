@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="gallery1.css">
+</head>
+<body>
+  <header>
+    <h1>IMAGE GALLERY</h1>
+    <div class="filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="nature">Nature</button>
+      <button class="filter-btn" data-category="city">City</button>
+      <button class="filter-btn" data-category="people">People</button>
+      <button class="filter-btn" data-category="food">Food</button>
+    </div>
+  </header>
+
+  
+  <main class="gallery">
+    <div class="gallery-item" data-category="nature">
+      <img src="http://s1.picswalls.com/wallpapers/2016/03/29/beautiful-nature-high-definition_042323787_304.jpg" alt="Nature">
+    </div>
+     <div class="gallery-item" data-category="food">
+      <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg" alt="food">
+    </div>
+     <div class="gallery-item" data-category="people">
+      <img src="https://img.freepik.com/free-photo/children-playing-grass_1098-504.jpg" alt="People">
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://img.freepik.com/free-photo/shiny-night-city_1127-8.jpg?semt=ais_hybrid" alt="city">
+    </div>
+    <div class="gallery-item" data-category="food">
+      <img src="https://images8.alphacoders.com/103/1032061.jpg" alt="food">
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://eskipaper.com/images/city-9.jpg" alt="City">
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2stMTkxLWFlLTA4MDE5LmpwZw.jpg" alt="People">
+    </div>
+    <div class="gallery-item" data-category="nature">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.cKTq4enAGO_Wg_Omp0ysngHaEK?pid=Api&P=0&h=180" alt="Nature">
+    </div>
+    <div class="gallery-item" data-category="food">
+      <img src="https://images.alphacoders.com/862/862638.jpg" alt="food">
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="https://wallup.net/wp-content/uploads/2015/07/Little-children-on-the-field.jpg" alt="People">
+    </div>
+    <div class="gallery-item" data-category="nature">
+      <img src="https://thewowstyle.com/wp-content/uploads/2015/07/natural-abundance.jpg" alt="Nature">
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://wallpaperaccess.com/full/2677547.jpg" alt="City">
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="http://www.austintexas.gov/sites/default/files/files/Health/Images/diverse_kids_in_park_151705490.jpg" alt="People">
+    </div>
+    <div class="gallery-item" data-category="nature">
+      <img src="https://wallpapercave.com/wp/s0H9E3Z.jpg" alt="nature">
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="navigation">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="gallery1.js"></script>
+</body>
+</html>
