@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #f4f4f9;
+      --text: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(135deg, #4A90E2, #357ABD);
+      --footer-bg: #222;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(135deg, #232526, #414345);
+      --footer-bg: #000;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: white;
+      padding: 2rem 1rem 1rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.3s ease;
+      text-align: center;
+    }
+
+    .header-left h1 {
+      font-size: 2rem;
+    }
+
+    .header-left p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    #themeToggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 20px;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      background: #FFD700;
+      color: #222;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      background: #ffcc00;
+    }
+
+    nav {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ffffff22;
+      color: #FFD700;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+      scroll-margin-top: 190px;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #4A90E2;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      background: var(--footer-bg);
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    @media(max-width:768px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Sneha Shaw</h1>
+      <p>Web Developer | CSE Student</p>
+    </div>
+    <button id="themeToggle">🌙</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>"Hello! I'm Sneha, a web development student with a passion for building innovative and user-friendly websites. With a strong foundation 
+        in HTML, CSS, and JavaScript, I'm always looking for new challenges and opportunities to grow as a developer. I'm excited to share my projects and experiences with you, and I hope you'll join me on this journey.
+        In my free time, I enjoy coding. I'm always looking for ways to improve my skills and stay up-to-date with the latest trends in web development.
+        I'm excited to see where this journey takes me and look forward to collaborating with others who share my passion for web development."
+      </p>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Core Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </section>
+  <section id="education">
+    <div class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><b>B.Tech CSE (2nd Year)</b> – Gandhi Institute For Education And Technology | CGPA: 9.14</li>
+        <li><b>XII (JAC)</b> – Jamshedpur Women’s College JSR | 71.2% (2023)</li>
+        <li><b>X (JAC)</b> – C.D.N. High School Pachando | 87.4% (2021)</li>
+      </ul>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="card">
+      <h2>Academic Projects</h2>
+      <ul>
+        <li>
+          <b>GAMMING-ZONE:</b> Developed a web-based gaming platform with interactive games like 
+          Rock-Paper-Scissors. Designed with <b>HTML, CSS, and JavaScript</b> for smooth gameplay 
+          and responsive UI. Implemented engaging animations and user-friendly navigation.  
+          🔗 <a href="https://github.com/Snehashaw21/GAMMING-ZONE" target="_blank">GitHub Repository</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="achievements">
+    <div class="card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Certified by NextWave in Generative AI</li>
+        <li>Certified by Coursera in IoT</li>
+        <li>Certified by Coursera in Java</li>
+      </ul>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:snehashaw261@gmail.com">snehashaw261@gmail.com</a></p>
+      <p>Phone: +91 9693265332</p>
+      <p>GitHub: <a href="https://github.com/Snehashaw21" target="_blank">github.com/Snehashaw21</a></p>
+    </div>
+  </section>
+  <footer>
+    <p>Thanks for visiting my portfolio!✨</p>
+  </footer>
+  <script>
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if(secTop < triggerBottom) {
+          sec.classList.add("show");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); 
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains('dark')){
+         themeToggle.textContent = '🌙';
+      } else {
+        themeToggle.textContent = '☀️';
+      }
+    });
+  </script>
+</body>
+</html>
